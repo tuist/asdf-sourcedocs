@@ -22,6 +22,7 @@ download_release "$ASDF_INSTALL_VERSION" "$release_file"
 unzip -o "$release_file" -d "$ASDF_DOWNLOAD_PATH/src" >/dev/null || fail "Could not extract $release_file"
 
 # Build the tool
+ls "$ASDF_DOWNLOAD_PATH/src"
 swift build --package-path "$ASDF_DOWNLOAD_PATH/src" -c release
 cp "$ASDF_DOWNLOAD_PATH/src/.build/release/sourcedocs" "$ASDF_DOWNLOAD_PATH/sourcedocs"
 
