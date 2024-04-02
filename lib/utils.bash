@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/tuist/tuist"
-TOOL_NAME="tuist"
-TOOL_TEST="tuist --help"
+GH_REPO="https://github.com/SourceDocs/SourceDocs"
+TOOL_NAME="sourcedocs"
+TOOL_TEST="sourcedocs --help"
 
 fail() {
 	echo -e "asdf-$TOOL_NAME: $*"
@@ -25,7 +25,7 @@ list_github_tags_sorted() {
 
 list_all_versions_sorted() {
 	# TODO: Adapt this. By default we simply list the tag names from GitHub releases.
-	# Change this function if tuist has other means of determining installable versions.
+	# Change this function if SourceDocs has other means of determining installable versions.
 	list_github_tags_sorted
 }
 
@@ -34,7 +34,7 @@ download_release() {
 	version="$1"
 	filename="$2"
 
-	url="$GH_REPO/releases/download/${version}/tuist.zip"
+	url="$GH_REPO/archive/refs/tags/${version}.zip"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
@@ -53,7 +53,6 @@ install_version() {
 		mkdir -p "$install_path"
 		cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
 
-		# TODO: Assert tuist executable exists.
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
 		test -x "$install_path/$tool_cmd" || fail "Expected $install_path/$tool_cmd to be executable."

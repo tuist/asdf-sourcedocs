@@ -1,8 +1,8 @@
 <div align="center">
 
-# asdf-tuist [![Build](https://github.com/tuist/asdf-tuist/actions/workflows/build.yml/badge.svg)](https://github.com/tuist/asdf-tuist/actions/workflows/build.yml) [![Lint](https://github.com/tuist/asdf-tuist/actions/workflows/lint.yml/badge.svg)](https://github.com/tuist/asdf-tuist/actions/workflows/lint.yml)
+# asdf-sourcedocs [![Build](https://github.com/tuist/asdf-sourcedocs/actions/workflows/build.yml/badge.svg)](https://github.com/tuist/asdf-sourcedocs/actions/workflows/build.yml) [![Lint](https://github.com/tuist/asdf-sourcedocs/actions/workflows/lint.yml/badge.svg)](https://github.com/tuist/asdf-sourcedocs/actions/workflows/lint.yml)
 
-[tuist](https://docs.tuist.io) plugin for the [asdf version manager](https://asdf-vm.com).
+[SourceDocs](https://github.com/SourceDocs/SourceDocs) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
@@ -22,25 +22,23 @@
 Plugin:
 
 ```shell
-asdf plugin add tuist
-# or
-asdf plugin add tuist https://github.com/tuist/asdf-tuist.git
+asdf plugin add sourcedocs https://github.com/tuist/asdf-sourcedocs.git
 ```
 
-tuist:
+sourcedocs:
 
 ```shell
 # Show all installable versions
-asdf list-all tuist
+asdf list-all sourcedocs
 
 # Install specific version
-asdf install tuist latest
+asdf install sourcedocs latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global tuist latest
+asdf global sourcedocs latest
 
-# Now tuist commands are available
-tuist --help
+# Now sourcedocs commands are available
+sourcedocs --help
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
@@ -50,7 +48,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/tuist/asdf-tuist/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/tuist/asdf-sourcedocs/graphs/contributors)!
 
 # License
 
