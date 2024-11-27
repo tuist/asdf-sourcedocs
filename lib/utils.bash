@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/SourceDocs/SourceDocs"
+GH_REPO="https://github.com/tuist/SourceDocs"
 TOOL_NAME="sourcedocs"
 TOOL_TEST="sourcedocs --help"
 
