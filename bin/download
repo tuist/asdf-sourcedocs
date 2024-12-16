@@ -27,3 +27,6 @@ cp "$ASDF_DOWNLOAD_PATH/src/SourceDocs-$ASDF_INSTALL_VERSION/.build/release/sour
 
 # Remove the tar.gz file since we don't need to keep it
 rm "$release_file"
+
+# Remove src folder so it doesn't get installed
+rm -rf "$ASDF_DOWNLOAD_PATH/src"
